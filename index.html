@@ -11,9 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 
-<!-- На 1920px ширины экрана, левый блок с фото в intro - не занимает 50% ширины -->
-<!-- Аналогичная проблема на маленьких разрешениях, надо как-то это переверстать же, или мы потом на адаптиве будем переделывать? -->
-
 <body>
     <!-- HEADER -->
     <header class="header">
@@ -40,40 +37,37 @@
                 </li>
             </ul>
         </div>
-        <!-- Решил nav вынести за блок container, чтобы можно было центровать меню через right: 0 у меню + position relative у блока header -->
-        <!-- Назвал это блоком header-nav (а не header__nav), чтобы от него строить свои list/item, вот кстати за это я не сильно люблю много списков, приходится обертки для БЭМ им делать, чтобы использовать дальше list/item -->
-        <!-- Как думаете, использование такой конструкции разрешается? Я про list/item + sublist\subitem, по-моему для двойного ul+li в меню, вполне подходит) -->
-        <nav class="header-nav">
-            <h2 class="header-nav__title">menu</h2>
-            <ul class="header-nav__list">
-                <li class="header-nav__item">
-                    <h3 class="header__menu-subtitle">man</h3>
-                    <ul class="header-nav__sublist">
-                        <li class="header-nav__subitem"><a href="#">Accessories</a></li>
-                        <li class="header-nav__subitem"><a href="#">Bags</a></li>
-                        <li class="header-nav__subitem"><a href="#">Denim</a></li>
-                        <li class="header-nav__subitem"><a href="#">T-Shirts</a></li>
+        <nav class="header__nav nav-container">
+            <h2 class="nav-container__title">menu</h2>
+            <ul class="nav-container__list">
+                <li class="nav-container__item">
+                    <h3 class="nav-container__subtitle">man</h3>
+                    <ul class="nav-container__sublist">
+                        <li class="nav-container__subitem"><a href="#">Accessories</a></li>
+                        <li class="nav-container__subitem"><a href="#">Bags</a></li>
+                        <li class="nav-container__subitem"><a href="#">Denim</a></li>
+                        <li class="nav-container__subitem"><a href="#">T-Shirts</a></li>
                     </ul>
                 </li>
                 <li>
-                    <h3 class="header__menu-subtitle">woman</h3>
-                    <ul class="header-nav__sublist">
-                        <li class="header-nav__subitem"><a href="#">Accessories</a></li>
-                        <li class="header-nav__subitem"><a href="#">Jackets & Coats</a></li>
-                        <li class="header-nav__subitem"><a href="#">Polos</a></li>
-                        <li class="header-nav__subitem"><a href="#">T-Shirts</a></li>
-                        <li class="header-nav__subitem"><a href="#">Shirts</a></li>
+                    <h3 class="nav-container__subtitle">woman</h3>
+                    <ul class="nav-container__sublist">
+                        <li class="nav-container__subitem"><a href="#">Accessories</a></li>
+                        <li class="nav-container__subitem"><a href="#">Jackets & Coats</a></li>
+                        <li class="nav-container__subitem"><a href="#">Polos</a></li>
+                        <li class="nav-container__subitem"><a href="#">T-Shirts</a></li>
+                        <li class="nav-container__subitem"><a href="#">Shirts</a></li>
                     </ul>
                 </li>
                 <li>
-                    <h3 class="header__menu-subtitle">kids</h3>
-                    <ul class="header-nav__sublist">
-                        <li class="header-nav__subitem"><a href="#">Accessories</a></li>
-                        <li class="header-nav__subitem"><a href="#">Jackets & Coats</a></li>
-                        <li class="header-nav__subitem"><a href="#">Polos</a></li>
-                        <li class="header-nav__subitem"><a href="#">T-Shirts</a></li>
-                        <li class="header-nav__subitem"><a href="#">Shirts</a></li>
-                        <li class="header-nav__subitem"><a href="#">Bags</a></li>
+                    <h3 class="nav-container__subtitle">kids</h3>
+                    <ul class="nav-container__sublist">
+                        <li class="nav-container__subitem"><a href="#">Accessories</a></li>
+                        <li class="nav-container__subitem"><a href="#">Jackets & Coats</a></li>
+                        <li class="nav-container__subitem"><a href="#">Polos</a></li>
+                        <li class="nav-container__subitem"><a href="#">T-Shirts</a></li>
+                        <li class="nav-container__subitem"><a href="#">Shirts</a></li>
+                        <li class="nav-container__subitem"><a href="#">Bags</a></li>
                     </ul>
                 </li>
             </ul>
@@ -84,7 +78,6 @@
         <section class="intro">
             <img src="img/intro-man.jpg" alt="мужчина в куртке" width="800" height="765">
             <div class="intro__title-wrapper">
-                <!-- Думаю через :before задавать линию не лучшая идея, сделаю ее через border-left -->
                 <h1 class="intro__title"><span class="intro__bold-text">the brand</span> of luxerious
                     <span class="intro__pink-text">fashion</span>
                 </h1>
@@ -93,30 +86,28 @@
         <section class="stocks">
             <h2 class="visually-hidden">Stock</h2>
             <ul class="stocks__list container">
-                <li class="stocks__item stocks__item-woman">
+                <li class="stocks__item stocks__item_woman">
                     <h3 class="stocks__title">30% off</h3>
                     <p class="stocks__text">for women</p>
                 </li>
-                <li class="stocks__item stocks__item-man">
+                <li class="stocks__item stocks__item_man">
                     <h3 class="stocks__title">hot deal</h3>
                     <p class="stocks__text">for men</p>
                 </li>
-                <li class="stocks__item stocks__item-kid">
+                <li class="stocks__item stocks__item_kid">
                     <h3 class="stocks__title">new arrivals</h3>
                     <p class="stocks__text">for kids</p>
                 </li>
-                <li class="stocks__item stocks__item-shoes">
+                <li class="stocks__item stocks__item_shoes">
                     <h3 class="stocks__title">luxirous & trendy</h3>
                     <p class="stocks__text">accesories</p>
                 </li>
             </ul>
         </section>
-        <!-- Пишу по памяти featured, проверил, вроде так и должно быть, или я ошибаюсь? -->
         <section class="featured">
             <h2 class="featured__title">Featured Items</h2>
             <p class="featured__text">Shop for items based on what we featured in this week</p>
             <ul class="featured__list container">
-                <!-- Здесь по идее нужна же ссылка-обертка? Какие-то дополнительные стили здесь a нужны? Или text-decoration: none хватит? -->
                 <a href="#" class="featured__link">
                     <li class="featured__item">
                         <img src="img/featured-item-1.jpg" alt="товар 1" class="featured__item-img">
@@ -124,7 +115,6 @@
                             <h4 class="featured__item-title">ellery x m'o capsule</h4>
                             <p class="featured__item-text">Known for her sculptural takes on traditional tailoring,
                                 Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                            <!-- Такие спецсимволы используют для знаков валют, или уже нет? -->
                             <p class="featured__price-item">&#36;52.00</p>
                         </div>
                     </li>

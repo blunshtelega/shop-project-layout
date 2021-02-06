@@ -69,7 +69,7 @@ body {
     margin: 0 0 0 20px;
 }
 
-.header-nav {
+.header__nav {
     position: absolute;
     top: 75px;
     background-color: orange;
@@ -103,6 +103,8 @@ body {
     color: var(--black-color);
 }
 
+/* Может здесь (108 и 115 строка css) тоже модификатор лучше будет? */
+
 .intro__bold-text {
     display: block;
     font-weight: 900;
@@ -132,25 +134,25 @@ body {
     justify-content: center;
 }
 
-.stocks__item-woman,
-.stocks__item-man,
-.stocks__item-kid {
+.stocks__item_woman,
+.stocks__item_man,
+.stocks__item_kid {
     margin: 0 0 30px;
 }
 
-.stocks__item-woman {
+.stocks__item_woman {
     background-image: url(../img/stock-woman.jpg);
 }
 
-.stocks__item-man {
+.stocks__item_man {
     background-image: url(../img/stock-man.jpg);
 }
 
-.stocks__item-kid {
+.stocks__item_kid {
     background-image: url(../img/stock-kid.jpg);
 }
 
-.stocks__item-shoes {
+.stocks__item_shoes {
     min-height: 160px;
     width: 100%;
     background-image: url(../img/stock-shoes.jpg);
@@ -173,7 +175,7 @@ body {
     color: var(--dark-pink-color);
 }
 
-/* FETURED */
+/* FEATURED */
 
 .featured__title {
     font-size: 30px;
