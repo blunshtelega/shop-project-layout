@@ -1,53 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- HEADER -->
     <header class="header">
-        <a href="#"><img src="http://via.placeholder.com/16" alt="Logo"></a>
-        <input type="search" class="header__search">
-        <ul>
-            <li><button><img src="http://via.placeholder.com/32" alt="Burger"></button></li>
-            <li><button><img src="http://via.placeholder.com/32" alt="Account"></button></li>
-            <li><button><img src="http://via.placeholder.com/32" alt="Cart"></button></li>
-        </ul>
-        <nav>
-            <h2>menu</h2>
-            <ul>
-                <li>
-                    <h3>man</h3>
-                    <ul>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Bags</a></li>
-                        <li><a href="#">Denim</a></li>
-                        <li><a href="#">T-Shirts</a></li>
+        <div class="container header__wrapper">
+            <div class="header__logo-wrapper">
+                <!-- Задал класс и margin для ссылки, т.к. ее все равно добавлять надо, а margin у img область клика увеличивает (ну или я не знаю как этого избежать) -->
+                <a href="#" class="header__logo-link"><img src="img/header-logo.svg" alt="логотип" width="44"
+                        height="38"></a>
+                <!-- <input type="search" class="header__search"> -->
+                <img src="img/header-search.svg" alt="поиск" width="27" height="28">
+            </div>
+            <ul class="header__list">
+                <li class="header__item">
+                    <button class="header__button"><img src="img/header-burger.svg" alt="бургер меню" width="32"
+                            height="32"></button>
+                </li>
+                <li class="header__item">
+                    <button class="header__button"><img src="img/header-profile.svg" alt="личный кабинет" width="32"
+                            height="32"></button>
+                </li>
+                <li class="header__item">
+                    <button class="header__button"><img src="img/header-cart.svg" alt="корзина" width="32"
+                            height="32"></button>
+                </li>
+            </ul>
+        </div>
+        <nav class="header__nav nav-container">
+            <h2 class="nav-container__title">menu</h2>
+            <ul class="nav-container__list">
+                <li class="nav-container__item">
+                    <h3 class="nav-container__subtitle">man</h3>
+                    <ul class="nav-container__sublist">
+                        <li class="nav-container__subitem"><a href="#">Accessories</a></li>
+                        <li class="nav-container__subitem"><a href="#">Bags</a></li>
+                        <li class="nav-container__subitem"><a href="#">Denim</a></li>
+                        <li class="nav-container__subitem"><a href="#">T-Shirts</a></li>
                     </ul>
                 </li>
                 <li>
-                    <h3>woman</h3>
-                    <ul>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Jackets & Coats</a></li>
-                        <li><a href="#">Polos</a></li>
-                        <li><a href="#">T-Shirts</a></li>
-                        <li><a href="#">Shirts</a></li>
+                    <h3 class="nav-container__subtitle">woman</h3>
+                    <ul class="nav-container__sublist">
+                        <li class="nav-container__subitem"><a href="#">Accessories</a></li>
+                        <li class="nav-container__subitem"><a href="#">Jackets & Coats</a></li>
+                        <li class="nav-container__subitem"><a href="#">Polos</a></li>
+                        <li class="nav-container__subitem"><a href="#">T-Shirts</a></li>
+                        <li class="nav-container__subitem"><a href="#">Shirts</a></li>
                     </ul>
                 </li>
                 <li>
-                    <h3>kids</h3>
-                    <ul>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Jackets & Coats</a></li>
-                        <li><a href="#">Polos</a></li>
-                        <li><a href="#">T-Shirts</a></li>
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Bags</a></li>
+                    <h3 class="nav-container__subtitle">kids</h3>
+                    <ul class="nav-container__sublist">
+                        <li class="nav-container__subitem"><a href="#">Accessories</a></li>
+                        <li class="nav-container__subitem"><a href="#">Jackets & Coats</a></li>
+                        <li class="nav-container__subitem"><a href="#">Polos</a></li>
+                        <li class="nav-container__subitem"><a href="#">T-Shirts</a></li>
+                        <li class="nav-container__subitem"><a href="#">Shirts</a></li>
+                        <li class="nav-container__subitem"><a href="#">Bags</a></li>
                     </ul>
                 </li>
             </ul>
@@ -56,49 +76,108 @@
     <!-- MAIN -->
     <main class="main">
         <section class="intro">
-            <!-- Изображение будет background-img? -->
-            <h1><span>the brand</span> of luxerious </span>fashion</span></h1>
-        </section>
-        <section class="offers">
-            <h2>Stock</h2>
-            <!-- Будут ли блоки ссылками? -->
-            <div class="future-wrapper">
-                <div>
-                    <h3>30% off</h3>
-                    <p>for women</p>
-                </div>
-                <div>
-                    <h3>hot deal</h3>
-                    <p>for men</p>
-                </div>
-                <div>
-                    <h3>new arrivals</h3>
-                    <p>for kids</p>
-                </div>
-                <div>
-                    <h3>luxirous & trendy</h3>
-                    <p>accesories</p>
-                </div>
+            <img src="img/intro-man.jpg" alt="мужчина в куртке" width="800" height="765">
+            <div class="intro__title-wrapper">
+                <h1 class="intro__title"><span class="intro__bold-text">the brand</span> of luxerious
+                    <span class="intro__pink-text">fashion</span>
+                </h1>
             </div>
         </section>
-        <section class="fetured">
-            <h2>Fetured Items</h2>
-            <p>Shop for items based on what we featured in this week</p>
-            <div class="future-wrapper">
-                <!-- Отверстаю один из блоков, чтобы код не хламить -->
-                <div>
-                    <img src="#" alt="item-1">
-                    <h3>ellery x m'o capsule</h3>
-                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
-                        teams
-                        up with Moda Operandi.</p>
-                    <p>$52.00</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-            <!-- Кнопка -->
-            <a href="#">Browse All Product</a>
+        <section class="stocks">
+            <h2 class="visually-hidden">Stock</h2>
+            <ul class="stocks__list container">
+                <li class="stocks__item stocks__item_woman">
+                    <h3 class="stocks__title">30% off</h3>
+                    <p class="stocks__text">for women</p>
+                </li>
+                <li class="stocks__item stocks__item_man">
+                    <h3 class="stocks__title">hot deal</h3>
+                    <p class="stocks__text">for men</p>
+                </li>
+                <li class="stocks__item stocks__item_kid">
+                    <h3 class="stocks__title">new arrivals</h3>
+                    <p class="stocks__text">for kids</p>
+                </li>
+                <li class="stocks__item stocks__item_shoes">
+                    <h3 class="stocks__title">luxirous & trendy</h3>
+                    <p class="stocks__text">accesories</p>
+                </li>
+            </ul>
         </section>
+        <section class="featured">
+            <h2 class="featured__title">Featured Items</h2>
+            <p class="featured__text">Shop for items based on what we featured in this week</p>
+            <ul class="featured__list container">
+                <a href="#" class="featured__link">
+                    <li class="featured__item">
+                        <img src="img/featured-item-1.jpg" alt="товар 1" class="featured__item-img">
+                        <div class="featured__text-wrapper">
+                            <h4 class="featured__item-title">ellery x m'o capsule</h4>
+                            <p class="featured__item-text">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="featured__price-item">&#36;52.00</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="featured__link">
+                    <li class="featured__item">
+                        <img src="img/featured-item-2.jpg" alt="товар 2" class="featured__item-img">
+                        <div class="featured__text-wrapper">
+                            <h4 class="featured__item-title">ellery x m'o capsule</h4>
+                            <p class="featured__item-text">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="featured__price-item">&#36;52.00</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="featured__link">
+                    <li class="featured__item">
+                        <img src="img/featured-item-3.jpg" alt="товар 3" class="featured__item-img">
+                        <div class="featured__text-wrapper">
+                            <h4 class="featured__item-title">ellery x m'o capsule</h4>
+                            <p class="featured__item-text">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="featured__price-item">&#36;52.00</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="featured__link">
+                    <li class="featured__item">
+                        <img src="img/featured-item-4.jpg" alt="товар 4" class="featured__item-img">
+                        <div class="featured__text-wrapper">
+                            <h4 class="featured__item-title">ellery x m'o capsule</h4>
+                            <p class="featured__item-text">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="featured__price-item">&#36;52.00</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="featured__link">
+                    <li class="featured__item">
+                        <img src="img/featured-item-5.jpg" alt="товар 5" class="featured__item-img">
+                        <div class="featured__text-wrapper">
+                            <h4 class="featured__item-title">ellery x m'o capsule</h4>
+                            <p class="featured__item-text">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="featured__price-item">&#36;52.00</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="featured__link">
+                    <li class="featured__item">
+                        <img src="img/featured-item-6.jpg" alt="товар 6" class="featured__item-img">
+                        <div class="featured__text-wrapper">
+                            <h4 class="featured__item-title">ellery x m'o capsule</h4>
+                            <p class="featured__item-text">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="featured__price-item">&#36;52.00</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="featured__button-more">Browse All Product</a>
+            </ul>
+        </section>
+        <!-- ЗАКОНЧИЛ ТУТ -->
         <section class="advanteges">
             <div class="one-more-wrapper">
                 <div>
