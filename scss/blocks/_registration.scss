@@ -1,5 +1,5 @@
 .registration {
-    height: 675px;
+    min-height: 675px;
 
     .registration__container {
         padding: 64px 0 0 0;
@@ -118,7 +118,7 @@
 
     .registration__perks-wrapper {
         width: 652px;
-        height: 300px;
+        min-height: 300px;
     }
 
     .registration-perks__title {
