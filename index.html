@@ -14,7 +14,6 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container header__wrapper">
-            <!-- При такой блочной системе я же не могу задать hover (допустим кнопке бургер), чтобы блоки на уровень выше (overlay и nav) отображались? Я понимаю, что скорей всего это будет за счет JS работать, но как на чистом CSs это миожно реализовать? через class + class:hover ? (чтобы hover на внутренний объект, изменял элементы выше - button:hover .overlay{display:block}) -->
             <div class="header__logo-wrapper">
                 <a href="index.html" class="header__logo-link"><img src="img/header-logo.svg" alt="логотип" width="44"
                         height="38"></a>
@@ -139,7 +138,6 @@
                         </div>
                         <div class="featured__overlay">
                             <button class="featerd__button" type="button">
-                                <!-- Решил "корзину" добавить inline, чтобы легко центровать через flex -->
                                 <svg width="27" height="25" viewBox="0 0 27 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -310,7 +308,6 @@
     </main>
     <footer class="footer">
         <div class="footer__subscribe subscribe-form">
-            <!-- Не понятно по макету связаны ли эти блоки (что это вообще за язык?), поэтому сделаю их отдельными div, а не li. Все равно каждый по своему позиционируется (В рамках контейнера) -->
             <div class="subscribe-form__container container">
                 <div class="subscribe-form__review ">
                     <img src="img/footer-woman.png" class="subscribe-form__img" alt="подписка" width="96" height="96">

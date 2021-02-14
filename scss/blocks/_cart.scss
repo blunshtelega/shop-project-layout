@@ -97,8 +97,8 @@
         font-style: normal;
         padding: 16px 40px;
         text-transform: uppercase;
-        border: none;
-        outline: 1px solid $black-color;
+        border: 1px solid $black-color;
+        outline: none;
         background-color: transparent;
         cursor: pointer;
     }

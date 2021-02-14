@@ -17,8 +17,6 @@
         color: $black-color;
     }
 
-    /* Может здесь тоже модификатор лучше будет? */
-
     .intro__bold-text {
         display: block;
         @include font(48px, 58px, 900);

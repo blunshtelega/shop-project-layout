@@ -91,65 +91,65 @@
             </ul>
         </nav>
     </header>
-    <!-- BREADCRUMBS -->
-    <section class="breadcrumbs">
-        <div class="container">
-            <h2 class="breadcrumbs__title">shopping cart</h2>
-        </div>
-    </section>
-    <!-- CART PAGE -->
-    <section class="cart">
-        <div class="cart-container container">
-            <ul class="cart-list">
-                <!-- Опять же вопрос к БЭМ, мне проще сделать cart-item блоком и от него строить модификаторы, для дальнейшей верстки. Это же не проблема? Мы же сами выбираем блоки и его модификаторы? -->
-                <li class="cart-item">
-                    <img class="cart-item__img" src="img/cart-item-1.jpg" alt="товар-1">
-                    <div class="cart-item__text-wrapper">
-                        <h3 class="cart-item__title">mango people <span class="cart-item__title_row">t-shirt</span></h3>
-                        <p class="cart-item__price">Price: <span class="cart-item__price_number">&#36;300</span></p>
-                        <p class="cart-item__color">Color: Red</p>
-                        <p class="cart-item__size">Size: Xl</p>
-                        <p class="cart-item__quantity">Quantity:</p>
+    <main class="main">
+        <!-- BREADCRUMBS -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <h2 class="breadcrumbs__title">shopping cart</h2>
+            </div>
+        </section>
+        <!-- CART PAGE -->
+        <section class="cart">
+            <h2 class="visually-hidden">Shopping cart</h2>
+            <div class="cart-container container">
+                <ul class="cart-list">
+                    <li class="cart-item">
+                        <img class="cart-item__img" src="img/cart-item-1.jpg" alt="товар-1">
+                        <div class="cart-item__text-wrapper">
+                            <h3 class="cart-item__title">mango people <span class="cart-item__title_row">t-shirt</span>
+                            </h3>
+                            <p class="cart-item__price">Price: <span class="cart-item__price_number">&#36;300</span></p>
+                            <p class="cart-item__color">Color: Red</p>
+                            <p class="cart-item__size">Size: Xl</p>
+                            <p class="cart-item__quantity">Quantity:</p>
+                        </div>
+                        <button type="button" class="cart-item__remove">&#10006;</button>
+                    </li>
+                    <li class="cart-item">
+                        <img class="cart-item__img" src="img/cart-item-2.jpg" alt="товар-2">
+                        <div class="cart-item__text-wrapper">
+                            <h3 class="cart-item__title">mango people <span class="cart-item__title_row">t-shirt</span>
+                            </h3>
+                            <p class="cart-item__price">Price: <span class="cart-item__price_number">&#36;300</span></p>
+                            <p class="cart-item__color">Color: Red</p>
+                            <p class="cart-item__size">Size: Xl</p>
+                            <p class="cart-item__quantity">Quantity:</p>
+                        </div>
+                        <button type="button" class="cart-item__remove">&#10006;</button>
+                    </li>
+                    <li class="cart-button-wrapper">
+                        <button type="button" class="cart-button-wrapper__button">clear shopping cart</button>
+                        <a href="#" class="cart-button-wrapper__link">continue shopping</a>
+                    </li>
+                </ul>
+                <div class="checkout">
+                    <form action="" class="checkout__form">
+                        <h3 class="checkout__title">shipping adress</h3>
+                        <input type="text" placeholder="Bangladesh" class="checkout__input">
+                        <input type="text" placeholder="State" class="checkout__input">
+                        <input type="text" placeholder="Postcode / Zip" class="checkout__input">
+                        <button class="checkout__button">get a quote</button>
+                    </form>
+                    <div class="checkout__total">
+                        <p class="checkout__price-discount">sub total <span
+                                class="checkout__price-discount_number">$900</span></p>
+                        <p class="checkout__price">grand total <span class="checkout__price_number">$900</span></p>
+                        <a href="#" class="checkout__link-send">proceed to checkout</a>
                     </div>
-                    <button type="button" class="cart-item__remove">&#10006;</button>
-                </li>
-                <li class="cart-item">
-                    <img class="cart-item__img" src="img/cart-item-2.jpg" alt="товар-2">
-                    <div class="cart-item__text-wrapper">
-                        <h3 class="cart-item__title">mango people <span class="cart-item__title_row">t-shirt</span></h3>
-                        <p class="cart-item__price">Price: <span class="cart-item__price_number">&#36;300</span></p>
-                        <p class="cart-item__color">Color: Red</p>
-                        <p class="cart-item__size">Size: Xl</p>
-                        <p class="cart-item__quantity">Quantity:</p>
-                    </div>
-                    <button type="button" class="cart-item__remove">&#10006;</button>
-                </li>
-                <li class="cart-button-wrapper">
-                    <!-- Здесь же одна button, а вторая ссылка? Из за своего поведения, мне кажется логично так сделать -->
-                    <button type="button" class="cart-button-wrapper__button">clear shopping cart</button>
-                    <!-- Но из за всего этого придется делать два разных класса. Вот тут вопрос, что лучше логика поведения элементов + лишний CSS ИЛИ наоборот?  :) -->
-                    <!-- Тут еще при одинаковых свойствах CSS у элемента "button" ширина больше, чем у элемента "a" из-за того, что в button текст как будто бы letter spacing имеет. Это как-то фиксится? -->
-                    <!-- ДА и сама ссылка меньше кажется визуально на 1-2px -->
-                    <a href="#" class="cart-button-wrapper__link">continue shopping</a>
-                </li>
-            </ul>
-            <div class="checkout">
-                <form action="" class="checkout__form">
-                    <h3 class="checkout__title">shipping adress</h3>
-                    <input type="text" placeholder="Bangladesh" class="checkout__input">
-                    <input type="text" placeholder="State" class="checkout__input">
-                    <input type="text" placeholder="Postcode / Zip" class="checkout__input">
-                    <button class="checkout__button">get a quote</button>
-                </form>
-                <div class="checkout__total">
-                    <p class="checkout__price-discount">sub total <span
-                            class="checkout__price-discount_number">$900</span></p>
-                    <p class="checkout__price">grand total <span class="checkout__price_number">$900</span></p>
-                    <a href="#" class="checkout__link-send">proceed to checkout</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__subscribe subscribe-form">
