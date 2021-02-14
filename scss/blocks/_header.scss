@@ -2,15 +2,6 @@
     background-color: $black-color;
     position: relative;
 
-    // Как объеденить 6 и 10 строчку?
-    &:hover .header__nav {
-        display: block;
-    }
-
-    &:hover .header__menu-overlay {
-        display: block;
-    }
-
     .header__wrapper {
         min-height: 75px;
         @include flex-center-space-between;
@@ -119,5 +110,9 @@
         &:hover {
             color: $text-pink-color;
         }
+    }
+
+    .header__display-block {
+        display: block;
     }
 }

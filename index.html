@@ -14,7 +14,6 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container header__wrapper">
-            <!-- При такой блочной системе я же не могу задать hover (допустим кнопке бургер), чтобы блоки на уровень выше (overlay и nav) отображались? Я понимаю, что скорей всего это будет за счет JS работать, но как на чистом CSs это миожно реализовать? через class + class:hover ? (чтобы hover на внутренний объект, изменял элементы выше - button:hover .overlay{display:block}) -->
             <div class="header__logo-wrapper">
                 <a href="index.html" class="header__logo-link"><img src="img/header-logo.svg" alt="логотип" width="44"
                         height="38"></a>
@@ -25,7 +24,7 @@
             </div>
             <ul class="header__list">
                 <li class="header__item">
-                    <button class="header__button" type="button">
+                    <button class="header__button header__button_burger" type="button">
                         <svg class="header__icon" width="32" height="23" viewBox="0 0 32 23"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" />
@@ -61,7 +60,7 @@
                     <ul class="nav-container__sublist">
                         <li class="nav-container__subitem"><a href="registration.html"
                                 class="nav-container__link">Accessories</a></li>
-                        <li class="nav-container__subitem"><a href="#" class="nav-container__link">Bags</a></li>
+                        <li class="nav-container__subitem"><a href="cart.html" class="nav-container__link">Bags</a></li>
                         <li class="nav-container__subitem"><a href="#" class="nav-container__link">Denim</a></li>
                         <li class="nav-container__subitem"><a href="#" class="nav-container__link">T-Shirts</a></li>
                     </ul>
@@ -139,7 +138,6 @@
                         </div>
                         <div class="featured__overlay">
                             <button class="featerd__button" type="button">
-                                <!-- Решил "корзину" добавить inline, чтобы легко центровать через flex -->
                                 <svg width="27" height="25" viewBox="0 0 27 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -310,7 +308,6 @@
     </main>
     <footer class="footer">
         <div class="footer__subscribe subscribe-form">
-            <!-- Не понятно по макету связаны ли эти блоки (что это вообще за язык?), поэтому сделаю их отдельными div, а не li. Все равно каждый по своему позиционируется (В рамках контейнера) -->
             <div class="subscribe-form__container container">
                 <div class="subscribe-form__review ">
                     <img src="img/footer-woman.png" class="subscribe-form__img" alt="подписка" width="96" height="96">
@@ -376,6 +373,7 @@
             </div>
         </div>
     </footer>
+    <script src="burger-menu.js"></script>
 
 </body>
 

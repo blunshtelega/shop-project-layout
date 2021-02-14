@@ -94,56 +94,60 @@
     <main class="main">
         <!-- BREADCRUMBS -->
         <section class="breadcrumbs">
-            <!-- Во тут можно не задавать breadcrumbs__wrapper/container? БЭМ не нарушается, если между breadcrumbs и breadcrumbs__title стоит блок container? -->
             <div class="container">
-                <h2 class="breadcrumbs__title">registration</h2>
+                <h2 class="breadcrumbs__title">shopping cart</h2>
             </div>
         </section>
-        <!-- REGISTRATION FORM -->
-        <section class="registration">
-            <h2 class="visually-hidden">Registration</h2>
-            <ul class="registration__container container">
-                <li class="registration__form-wrapper">
-                    <form action="" class="registration__form registration-form">
-                        <h3 class="registration-form__title">Your Name</h3>
-                        <label class="visually-hidden" for="first-name">имя</label>
-                        <input type="text" class="registration-form__input" id="first-name" placeholder="First Name">
-                        <label class="visually-hidden" for="last-name">фамилия</label>
-                        <input type="text" class="registration-form__input" id="last-name" placeholder="Last Name">
-                        <div class="registration-form__radio-wrapper">
-                            <input type="radio" class="registration-form__radio" id="male" name="contact" value="email">
-                            <label class="registration-form__label" for="male">Male</label>
-                            <input type="radio" class="registration-form__radio" id="female" name="contact"
-                                value="phone">
-                            <label class="registration-form__label" for="female">Female</label>
+        <!-- CART PAGE -->
+        <section class="cart">
+            <h2 class="visually-hidden">Shopping cart</h2>
+            <div class="cart-container container">
+                <ul class="cart-list">
+                    <li class="cart-item">
+                        <img class="cart-item__img" src="img/cart-item-1.jpg" alt="товар-1">
+                        <div class="cart-item__text-wrapper">
+                            <h3 class="cart-item__title">mango people <span class="cart-item__title_row">t-shirt</span>
+                            </h3>
+                            <p class="cart-item__price">Price: <span class="cart-item__price_number">&#36;300</span></p>
+                            <p class="cart-item__color">Color: Red</p>
+                            <p class="cart-item__size">Size: Xl</p>
+                            <p class="cart-item__quantity">Quantity:</p>
                         </div>
-                        <h3 class="registration-form__title">Login details</h3>
-                        <label class="visually-hidden" for="email">почта</label>
-                        <input type="email" class="registration-form__input" id="email" placeholder="Email">
-                        <label class="visually-hidden" for="password">пароль</label>
-                        <input type="password" class="registration-form__input" id="password" placeholder="Password">
-                        <p class="registration-form__text">Please use 8 or more characters, with at least 1 number and a
-                            mixture of uppercase and lowercase
-                            letters</p>
-                        <button type="submit" class="registration-form__button"><span
-                                class="registration-form__button-title">join
-                                now</span></button>
+                        <button type="button" class="cart-item__remove">&#10006;</button>
+                    </li>
+                    <li class="cart-item">
+                        <img class="cart-item__img" src="img/cart-item-2.jpg" alt="товар-2">
+                        <div class="cart-item__text-wrapper">
+                            <h3 class="cart-item__title">mango people <span class="cart-item__title_row">t-shirt</span>
+                            </h3>
+                            <p class="cart-item__price">Price: <span class="cart-item__price_number">&#36;300</span></p>
+                            <p class="cart-item__color">Color: Red</p>
+                            <p class="cart-item__size">Size: Xl</p>
+                            <p class="cart-item__quantity">Quantity:</p>
+                        </div>
+                        <button type="button" class="cart-item__remove">&#10006;</button>
+                    </li>
+                    <li class="cart-button-wrapper">
+                        <button type="button" class="cart-button-wrapper__button">clear shopping cart</button>
+                        <a href="#" class="cart-button-wrapper__link">continue shopping</a>
+                    </li>
+                </ul>
+                <div class="checkout">
+                    <form action="" class="checkout__form">
+                        <h3 class="checkout__title">shipping adress</h3>
+                        <input type="text" placeholder="Bangladesh" class="checkout__input">
+                        <input type="text" placeholder="State" class="checkout__input">
+                        <input type="text" placeholder="Postcode / Zip" class="checkout__input">
+                        <button class="checkout__button">get a quote</button>
                     </form>
-                </li>
-                <li class="registration__perks-wrapper registration-perks">
-                    <h3 class="registration-perks__title">loyalty has its perks</h3>
-                    <p class="registration-perks__text">Get in on the loyalty program where you can earn points and
-                        unlock
-                        serious perks. Starting with these as soon as you join:</p>
-                    <ul class="registration-perks__list">
-                        <li class="registration-perks__item">15% off welcome offer</li>
-                        <li class="registration-perks__item">Free shipping, returns and exchanges on all orders</li>
-                        <li class="registration-perks__item">Free shipping, returns and exchanges on all orders</li>
-                        <li class="registration-perks__item">Early access to products</li>
-                        <li class="registration-perks__item">Exclusive offers & rewards</li>
-                    </ul>
-                </li>
-            </ul>
+                    <div class="checkout__total">
+                        <p class="checkout__price-discount">sub total <span
+                                class="checkout__price-discount_number">$900</span></p>
+                        <p class="checkout__price">grand total <span class="checkout__price_number">$900</span></p>
+                        <a href="#" class="checkout__link-send">proceed to checkout</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <!-- FOOTER -->

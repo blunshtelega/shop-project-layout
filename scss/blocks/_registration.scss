@@ -1,5 +1,5 @@
 .registration {
-    height: 675px;
+    min-height: 675px;
 
     .registration__container {
         padding: 64px 0 0 0;
@@ -50,21 +50,6 @@
             align-items: center;
             user-select: none;
         }
-
-        // Почему такие конструкции не работают?
-
-        // & + .registration-form__label::before {
-        //     width: 17px;
-        //     height: 17px;
-        //     border: 1px solid $border-grey-color;
-        //     border-radius: 50%;
-        //     margin: 0 6px 0 0;
-        // }
-
-        // &:checked + .registration-form__label::before {
-        //     background-color: $button-pink-color;
-        //     border: 1px solid $button-pink-color;
-        // }
     }
 
     .registration-form__radio + .registration-form__label::before {
@@ -118,7 +103,7 @@
 
     .registration__perks-wrapper {
         width: 652px;
-        height: 300px;
+        min-height: 300px;
     }
 
     .registration-perks__title {
