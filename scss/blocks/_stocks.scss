@@ -5,7 +5,7 @@
     padding: 63px 0 0 0;
 
     .stocks__item {
-        width: 360px;
+        width: 32%;
         min-height: 260px;
         flex-direction: column;
         @include flex-center;
@@ -46,5 +46,55 @@
         @include font(24px, 29px, 700);
         text-transform: uppercase;
         color: $text-pink-color;
+    }
+
+    @media (max-width: $tablet-width) {
+        & {
+            padding: 19px 0 0 0;
+            width: 96%;
+        }
+
+        .stocks__item {
+            min-height: 168px;
+            background-size: cover;
+        }
+
+        .stocks__item_shoes {
+            min-height: 116px;
+        }
+
+        .stocks__item_woman,
+        .stocks__item_man,
+        .stocks__item_kid {
+            margin: 0 0 16px;
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        .stocks__item {
+            width: 100%;
+        }
+
+        & {
+            padding: 64px 0 0 0;
+        }
+
+        .stocks__item {
+            min-height: 247px;
+        }
+
+        .stocks__item_shoes {
+            min-height: 111px;
+        }
+
+        .stocks__item_woman,
+        .stocks__item_man,
+        .stocks__item_kid {
+            margin: 0 0 32px;
+        }
+
+        .stocks__item_shoes {
+            background-position: bottom;
+        }
     }
 }
