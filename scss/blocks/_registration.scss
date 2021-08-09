@@ -8,7 +8,7 @@
     }
 
     .registration__form-wrapper {
-        width: 365px;
+        width: 31%;
     }
 
     .registration__form {
@@ -23,7 +23,7 @@
     }
 
     .registration-form__input {
-        width: 345px;
+        width: 98%;
         min-height: 45px;
         border: none;
         outline: 1px solid #a4a4a4;
@@ -102,7 +102,7 @@
     }
 
     .registration__perks-wrapper {
-        width: 652px;
+        width: 56%;
         min-height: 300px;
     }
 
@@ -133,6 +133,47 @@
             position: absolute;
             top: 8px;
             left: -35px;
+        }
+    }
+
+    @media (max-width: $tablet-width) {
+        .registration__form-wrapper {
+            width: 47%;
+        }
+
+        .registration__perks-wrapper {
+            width: 47%;
+        }
+
+        .registration-perks__title {
+            @include font(16px, 19px, 300);
+        }
+
+        .registration-perks__text {
+            @include font(16px, 19px, 300);
+        }
+
+        .registration-perks__item {
+            @include font(16px, 19px, 300);
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        .registration__container {
+            flex-direction: column;
+        }
+
+        .registration__form-wrapper {
+            width: 97%;
+        }
+
+        .registration__perks-wrapper {
+            width: 97%;
+            margin: 40px 0 0 0;
+        }
+
+        & {
+            min-height: 1032px;
         }
     }
 }

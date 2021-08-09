@@ -115,4 +115,17 @@
     .header__display-block {
         display: block;
     }
+
+    @media (max-width: $tablet-width) {
+        .header__search-form {
+            display: none;
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        .header__button_cart,
+        .header__button_account {
+            display: none;
+        }
+    }
 }

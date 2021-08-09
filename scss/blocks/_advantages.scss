@@ -32,4 +32,34 @@
         @include font(14px, 17px, 300);
         color: $text-white-color;
     }
+
+    @media (max-width: $tablet-width) {
+        .advanteges__list {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .advanteges__wrapper {
+            min-height: 610px;
+            align-items: normal;
+        }
+
+        .advanteges__item {
+            margin: 48px 0 0 0;
+        }
+
+        .advanteges__item:last-child {
+            margin: 48px 0 64px 0;
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        .advanteges__item:last-child {
+            margin: 48px 0 81px 0;
+        }
+
+        .advanteges__item {
+            width: 340px;
+        }
+    }
 }
